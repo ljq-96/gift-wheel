@@ -1,9 +1,55 @@
 export enum TargetType {
-  boyfriend = 'boyfriend',
-  girlfriend = 'girlfriend',
+  男友,
+  女友,
 }
 
-export const ThemeColor = new Map<TargetType, string>([
-  [TargetType.boyfriend, '#0095d9'],
-  [TargetType.girlfriend, '#e9546b'],
+export const Config = new Map<TargetType, { color: string; gifts: string[] }>([
+  [
+    TargetType.男友,
+    {
+      color: '#0095d9',
+      gifts: [
+        '三分钟听话女友',
+        '穿jk',
+        '再转一次',
+        '陪你打游戏',
+        '爱的抱抱',
+        '任选一个',
+        '哄睡觉',
+        '捶背揉肩8小时',
+        '200红包',
+        '一天小跟班',
+        '良医',
+        '充电一次',
+        '打屁股十下',
+        '给你洗个jio',
+        '请吃火锅',
+        '二硫化氢',
+      ],
+    },
+  ],
+  [
+    TargetType.女友,
+    {
+      color: '#e9546b',
+      gifts: [
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+        '爱的抱抱',
+      ],
+    },
+  ],
 ])

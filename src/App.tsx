@@ -1,12 +1,14 @@
 import { ConfigProvider } from 'antd'
 import { useStore } from './contexts/useStore'
 import GiftWheel from './GiftWheel'
-import { ThemeColor } from './types'
+import { Config } from './types'
+import zhCN from 'antd/locale/zh_CN'
+import 'antd/dist/reset.css'
 
 function App() {
   const [{ target }] = useStore()
   return (
-    <ConfigProvider theme={{ token: { colorPrimary: ThemeColor.get(target) } }}>
+    <ConfigProvider locale={zhCN} theme={{ token: { colorPrimary: Config.get(target).color } }}>
       <GiftWheel />
     </ConfigProvider>
   )
